@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "123693558300",
+    "project_id": "mgm-app-29",
+    "storage_bucket": "mgm-app-29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123693558300:android:f0b4bd0e208feb101b4dd9",
+        "android_client_info": {
+          "package_name": "com.arasait.mgm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123693558300-ki5t1sgl5s6hvvrhljm7ghiihhjeb1hj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV-4OyPvtJxJ2hyfnrEZAiCD1tHhnjIl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123693558300-ki5t1sgl5s6hvvrhljm7ghiihhjeb1hj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
