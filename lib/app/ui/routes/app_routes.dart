@@ -1,3 +1,4 @@
+import '../pages/filter_gastos/filter_gastos_page.dart';
 import '../pages/trabajos/trabajos_page.dart';
 import '../pages/facturas/facturas_page.dart';
 import '../pages/register/register_page.dart';
@@ -14,9 +15,10 @@ Map<String, Widget Function(BuildContext)> get appRoutes {
     Routes.HOME: (_) => const HomePage(),
     Routes.SPLASH: (_) => const SplashPage(),
     Routes.LOGIN: (_) => const LoginPage(),
-    Routes.GASTOS: (_) =>  const GastosPage(),
+    Routes.GASTOS: (_) => const GastosPage(),
     Routes.REGISTER: (_) => RegisterPage(),
     Routes.FACTURAS: (_) => const FacturasPage(),
     Routes.TRABAJOS: (_) => const TrabajosPage(),
+    Routes.FILTER_GASTOS: (_) => const FilterGastosPage(),
   };
 }

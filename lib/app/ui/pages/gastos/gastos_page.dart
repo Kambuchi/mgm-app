@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/router.dart' as router;
@@ -7,7 +6,6 @@ import 'package:intl/intl.dart';
 import 'package:mgm/app/domain/models/gastos.dart';
 import 'package:mgm/app/ui/global_utils/colors.dart';
 import 'package:mgm/app/ui/global_utils/date_format.dart';
-import 'package:mgm/app/ui/global_utils/font_styles.dart';
 import 'package:mgm/app/ui/global_utils/responsive.dart';
 import 'package:mgm/app/ui/pages/gastos/utils/rubro_gastos.dart';
 
@@ -19,16 +17,6 @@ class GastosPage extends StatefulWidget {
 }
 
 class _GastosPageState extends State<GastosPage> {
-  String? rubro;
-  List<String> rubros = [
-    'ADMINISTRATIVO',
-    'FIJOS',
-    'RODADOS',
-    'INSUMOS',
-    'MANO DE OBRA',
-    'SALARIAL',
-    'PUBLICIDAD'
-  ];
   late List<Gastos> gastosList;
 
   @override
@@ -36,43 +24,20 @@ class _GastosPageState extends State<GastosPage> {
     super.initState();
     gastosList = [];
   }
+
   @override
   Widget build(BuildContext context) {
     final formatter = NumberFormat('###,###', 'es_PY');
-    final GastosList gastos = router.arguments as GastosList;
-    gastos.gastos.sort((a, b) => b.fecha.compareTo(a.fecha));
+    gastosList = router.arguments as List<Gastos>;
+    gastosList.sort((a, b) => b.fecha.compareTo(a.fecha));
     int montoTotal = 0;
-    selectRubro(null, gastos.gastos);
     for (var item in gastosList) {
       montoTotal += item.monto;
     }
 
-    
     return Scaffold(
       appBar: AppBar(
         title: const Text('Gastos'),
-        actions: [
-          Center(
-            child: Text(
-              'Filtar',
-              style: FontStyles.regular
-                  .copyWith(fontSize: Responsive(context).dp(1.8)),
-            ),
-          ),
-          DropdownButton<String?>(
-            value: rubro,
-            items: rubros.map(buildMenuItem).toList(),
-            onChanged: (value) {
-            setState(() {
-              rubro = value;
-            });
-            inspect(rubro);
-            selectRubro(rubro, []);
-
-            } 
-            
-          ),
-        ],
       ),
       body: SafeArea(
           child: ListView.builder(
@@ -128,24 +93,4 @@ class _GastosPageState extends State<GastosPage> {
       ),
     );
   }
-  void selectRubro(String? rubro, List<Gastos> gastos) {
-      if (rubro != null){
-        final pre =
-            gastosList.where((element) => element.rubro_gasto != null).toList();
-        final result =
-            pre.where((e) => e.rubro_gasto == rubro).toList();
-        setState(() {
-          gastosList = result;
-        });
-      }
-      setState(() {
-        gastosList = gastos;
-      });
-    }
-
-
-  DropdownMenuItem<String> buildMenuItem(String item) => DropdownMenuItem(
-        value: item,
-        child: Text(item),
-      );
 }

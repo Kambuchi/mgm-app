@@ -8,4 +8,5 @@ abstract class Routes {
   static const REGISTER = '/register';
   static const FACTURAS = '/facturas';
   static const TRABAJOS = '/trabajos';
+  static const FILTER_GASTOS = '/filter-gastos';
 }

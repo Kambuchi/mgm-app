@@ -83,7 +83,6 @@ class TrabajosPage extends StatelessWidget {
             children: [
               Text('Se encontraron ${trabajosList.length} registros.'),
               const Spacer(),
-              Text(''),
             ],
           ),
         ),

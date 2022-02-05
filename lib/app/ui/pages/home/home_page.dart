@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                         child: RoundedButton(
                             onPressed: () {
                               getGastos().then((value) => Navigator.pushNamed(
-                                  context, Routes.GASTOS,
+                                  context, Routes.FILTER_GASTOS,
                                   arguments: value));
                             },
                             label: 'Gastos'),

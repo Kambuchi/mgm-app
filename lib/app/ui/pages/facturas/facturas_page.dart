@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_meedu/router.dart' as router;
 import 'package:intl/intl.dart';
-import 'package:flutter_meedu/state.dart';
 import 'package:mgm/app/domain/models/facturas.dart';
 import 'package:mgm/app/ui/global_utils/colors.dart';
 import 'package:mgm/app/ui/global_utils/date_format.dart';
 import 'package:mgm/app/ui/global_utils/font_styles.dart';
 import 'package:mgm/app/ui/global_utils/responsive.dart';
-import 'controller/facturas_provider.dart';
 
 class FacturasPage extends StatefulWidget {
   const FacturasPage({Key? key}) : super(key: key);
@@ -104,7 +102,6 @@ class _FacturasPageState extends State<FacturasPage> {
           padding: EdgeInsets.all(Responsive(context).dp(2.5)),
           child: Row(
             children: [
-              Text(''),
               const Spacer(),
               Text('Total Cobrado: Gs. ${formatter.format(montoTotal)}'),
             ],

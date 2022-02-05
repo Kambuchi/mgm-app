@@ -13,3 +13,9 @@ String dateFormat(String fecha) {
   final y = x[2].split("T");
   return '${y[0]}-${x[1]}-${x[0]}';
 }
+
+String dateTimeFormat(DateTime fecha) {
+  final x = fecha.toString().split(" ");
+  final y = x[0].split("-");
+  return '${y[2]} - ${y[1]} - ${y[0]}';
+}
