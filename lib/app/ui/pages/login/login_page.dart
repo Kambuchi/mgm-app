@@ -56,7 +56,7 @@ class LoginPage extends StatelessWidget {
                         SizedBox(
                           height: responsive.dp(2.5),
                         ),
-                        Text(
+                        const Text(
                           'Bienvenido!!',
                           textAlign: TextAlign.center,
                           style: FontStyles.title,

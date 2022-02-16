@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                 : Column(
                     children: [
                       const Spacer(),
-                      Text(
+                      const Text(
                         'Lista de Reportes',
                         style: FontStyles.title,
                       ),

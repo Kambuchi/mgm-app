@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 abstract class FontStyles {
-  static final textTheme = GoogleFonts.nunitoTextTheme();
+  // static final textTheme = GoogleFonts.nunitoTextTheme();
 
-
-  static final title = GoogleFonts.montserrat(
+  static const title = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.bold,
   );
-  static final regular = GoogleFonts.nunito(
+  static const regular = TextStyle(
     fontWeight: FontWeight.w600,
   );
-  static final normal = GoogleFonts.nunito(
+  static const normal = TextStyle(
     fontWeight: FontWeight.w300,
   );
-  
 }

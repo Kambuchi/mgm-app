@@ -55,7 +55,7 @@ class _FilterGastosPageState extends State<FilterGastosPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'Filtre sus reportes',
                     style: FontStyles.title,
                   ),
@@ -64,7 +64,7 @@ class _FilterGastosPageState extends State<FilterGastosPage> {
                   ),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         'Seleccionar rubro',
                         style: FontStyles.regular,
                       ),
@@ -80,17 +80,17 @@ class _FilterGastosPageState extends State<FilterGastosPage> {
                     ],
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         'Seleccionar fecha',
                         style: FontStyles.regular,
                       ),
-                      const Spacer(),
+                      Spacer(),
                     ],
                   ),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         'Inicio',
                         style: FontStyles.normal,
                       ),
@@ -117,7 +117,7 @@ class _FilterGastosPageState extends State<FilterGastosPage> {
                   ),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         'Final',
                         style: FontStyles.normal,
                       ),
@@ -146,12 +146,12 @@ class _FilterGastosPageState extends State<FilterGastosPage> {
                     height: Responsive(context).hp(2),
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         'Seleccionar Monto',
                         style: FontStyles.regular,
                       ),
-                      const Spacer(),
+                      Spacer(),
                     ],
                   ),
                   SizedBox(
